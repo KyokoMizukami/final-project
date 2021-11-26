@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit to do</title>
+    <link rel="stylesheet" href="edit.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <img class="logo" src="/Pictures/Online Working Tree-logos.jpeg" />
+        <nav class="nav">
+          <ul class="nav__wrapper">
+            <li class="nav__item"><a href="Home.html">HOME</a></li>
+            <li class="nav__item"><a href="SeeToDo.html">SEE TO DO</a></li>
+            <li class="nav__item"><a href="EditToDo.html">EDIT TO DO</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="contents">
+      <div class="registerForm">
+    <h1>User Register</h1>
+    <form th:action="@{/user/create}" th:object="${userRequest}"
+        method="post">
+        <table>
+            <tr>
+                <th class="cell_title">Name</th>
+                <th class="cell_required">※</th>
+                <td><input type="text" th:field="*{name}"></td>
+            </tr>
+            <tr>
+                <th class="cell_title">Address</th>
+                <th class="cell_required"></th>
+                <td><input type="text" th:field="*{address}"></td>
+            </tr>
+            <tr>
+                <th class="cell_title">Phone number</th>
+                <th class="cell_required"></th>
+                <td><input type="text" th:field="*{phone}"></td>
+            </tr>
+        </table>
+        <div class="btn_area_center">
+            <input type="submit" value="register" class="btn">
+        </div>
+    </form>
+    </div>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="sentence">
+          <p class="SenP">Organization is better than river of ideas!</p>
+        </div>
+        <div class="credits">
+          <p class="cred1">Made by Sohta, Sota, Juan, Shouki, Kyoko.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
